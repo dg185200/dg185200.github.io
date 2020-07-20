@@ -12,6 +12,10 @@ h2 {
     font-size: 1.8em;
 }
 
+li {
+    margin: 10px 0;
+}
+
 #container {
     margin:0 auto;
 }    
