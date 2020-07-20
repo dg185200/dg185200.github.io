@@ -1,11 +1,19 @@
+<html>
+        <link rel="stylesheet" type="text/css" href="./hackathon.css">
+<head>
+	
+</head>
+<body>
+
+<div id="container">
 <h1>NCR QR Apps</h1>
-Apple just introduced App Clips, a way to use mobile apps without having to install them on your mobile device. This is very useful when a customer wants to interact with a business but does not necessarily want to install the full app and share information with a business that he/she might not visit ever again. In these times, being able to use a mobile device to streamline the interaction with a business allows for a touchless and safer experience.
+	<p>Apple just introduced App Clips, a way to use mobile apps without having to install them on your mobile device. This is very useful when a customer wants to interact with a business but does not necessarily want to install the full app and share information with a business that she might not visit ever again. In these times, being able to use a mobile device to streamline the interaction with a business allows for a touchless and safer experience.</p>
 
-Our idea is to implement a similar concept to App Clips but leveraging progressive web apps and QR codes. We are going to implement simple, single-purpose responsive websites that will be able to generate QR codes to be read by NCR's point-of-sale technology. Here's an example of how one of these apps would work: 
+	<p>Our idea is to implement a similar concept to App Clips but leveraging progressive web apps and QR codes. We are going to implement simple, single-purpose responsive websites that will be able to generate QR codes to be read by NCR's point-of-sale technology. Here's an example of how one of these apps would work:</p>
 
-Alice goes to a new restaurant and wants to order some food. Using her phone, Alices scans a QR code that is displayed in the premise. This takes her to the NCR QR App, a light website that is white labeled for the business. The site presents the menu and she can create her order, including the mode of payment. She can also select if she wants to receive a digital receipt by providing her phone or her email  address. Once she's done, and here's the important part, the web app generates a new QR code that encodes all the information about the order. She can scan it now at an NCR POS or a kiosk in the store. The order is recorded and the mode of payment is presented (e.g. Credit Card, Apple Pay, Google Wallet, etc) to complete the transaction.
+	<p>Alice goes to a new restaurant and wants to order some food. Using her phone, Alices scans a QR code that is displayed in the premise. This takes her to the NCR QR App, a light website that is white labeled for the business. The site presents the menu and she can create her order, including the mode of payment and if she wants to receive a digital receipt by providing her phone or her email address. Once she's done, and here's the important part, the web app generates a new QR code that encodes all the information about the order. She can scan it now at an NCR POS or a kiosk in the store. The order is recorded and the mode of payment is presented (e.g. Credit Card, Apple Pay, Google Wallet, etc) to complete the transaction.</p>
 
-Note that Alice did not have to create an account or install any application at any point. All data stays in her device and is only transferred through the image encoding to the POS. The experience is fast and frictionless. 
+	<p>Note that Alice did not have to create an account or install any application on her device at any point. All data stays in her phone and is only transferred through the image encoding to the POS. The experience is fast and frictionless.</p>
 
 <h2>Existing NCR technology</h2> 
 	<ul>
@@ -13,12 +21,42 @@ Note that Alice did not have to create an account or install any application at 
 		<li> Use of BSP services (Catalog, Menu, CDM, PES, TDM, Digital Receipts)</li>
 	</ul>
 
-Check the supporting link for additional information and scenarios
+<h2> Additional Information</h2>
+	<h3>What is a progressive web application?</h3>
+	<p>A PWA is an application that is delivered through the web instead of a (e.g Apple App Store or Google Play Store). These apps are implemented using standard web technologies such as HTML, CSS and Javascript, and they can run on any device with a modern web browser installed. They can support offline modes, push notifications and other native app functionality.</p>
 
-<h2> Additional Information</h2>What is a progressive web application?A PWA is an application that is delivered through the web instead of a (e.g Apple App Store or Google Play Store). These apps are implemented using standard web technologies such as HTML, CSS and Javascript, and they can run on any device with a modern web browser installed. They can support offline modes, push notifications and other native app functionality.  
-Other Scenarios/Apps: * Alice and Bob can check the menu and preorder at a restaurant while they are waiting to get a table. Since they are paying in advance, the restaurant ensures the order will be honored and Alice and Bob get to have their food prepared while they wait if they wish to. * At a drive-through, Bob scans the QR code and creates an order from his car while waiting in line. Instead of telling a teller what his order is, he can directly scan the QR code. This prevents mistakes and streamlines the order. A similar concept could be done at a bank to avoid lines and streamline the experience. * Alice goes to her usual grocery store website, creates a shopping list and sends the generated QR code to Bob, who's driving to the store. On arrival, Bob scans the QR code using a kiosk at the grocery store and is redirected to a web view where he can see everything that was included in the shopping list. The web app indicates where to find each item in the store, offers alternatives in case one item is out of stock and potentially shows upsells and promotions. * At the stadium, Bob wants to grab something to eat during the game. He needs to stand in a long line in order to place the order and miss part of the game. With an NCR self-checkout placed right next to the concession, he can scan the QR code, open the QR App, select what he wants to order and pay all from his phone. He gets his order once ready and he didn't need to install anything on his phone.
-Considerations:* QR codes can encrypt up to 4300 alphanumeric characters. If needed, we could generate multiple QR codes (Our QR format would include a pagination indicator so the POS is aware multiple codes need to be scanned).* If the generated QR code requires additional security so other readers cannot decode the generated QR code, we could use asymmetric encryption (similar to JWT technology) to protect it.* We could explore other forms of payment such as Venmo (additional touchless experience) and split payment options for parties.
-* As part of the experience, the QR App can promote and help customers sign up for a loyalty program. * Same functionality could be implemented using Apple App Clips and Android Instant Apps as an additional option.The advantage of this solution is that we are platform/phone agnostic (Apple App Clips only work on iOS devices) and use open web technologies.
+<h3>Other Scenarios/Apps:</h3>
+	<ul>
+		<li>
+			Alice and Bob can check the menu and preorder at a restaurant while they are waiting to get a table. Since they are paying in advance, the restaurant ensures the order will be honored and Alice and Bob get to have their food prepared while they wait if they wish to</li>
+		<li>
+			At a drive-through, Bob scans the QR code and creates an order from his car while waiting in line. Instead of telling a teller what his order is, he can directly scan the QR code. This prevents mistakes and streamlines the order. A similar concept could be done at a bank to avoid lines and streamline the experience.</li>
+		<li>
+			Alice goes to her usual grocery store website, creates a shopping list and sends the generated QR code to Bob, who's driving to the store. On arrival, Bob scans the QR code using a kiosk at the grocery store and is redirected to a web view where he can see everything that was included in the shopping list. The web app indicates where to find each item in the store, offers alternatives in case one item is out of stock and potentially shows upsells and promotions.
+		</li>
+		<li>
+			At the stadium, Bob wants to grab something to eat during the game. He needs to stand in a long line in order to place the order and miss part of the game. With an NCR self-checkout placed right next to the concession, he can scan the QR code, open the QR App, select what he wants to order and pay all from his phone. He gets his order once ready and he didn't need to install anything on his phone.
+		</li>
+	</ul>
 
-Others: * Even encode the receipt in another QR code if she prefers not to share any personal information at all)
- * By creating a QR format that encodes generic grocery items, the QR code can be used in many different stores (helps finding items in a store you don't usually visit).
+	<h3>Considerations</h3>
+	<ul>
+		<li>
+			QR codes can encrypt up to 4300 alphanumeric characters. If needed, we could generate multiple QR codes (Our QR format would include a pagination indicator so the POS is aware multiple codes need to be scanned).
+		</li>
+		<li>
+			If the generated QR code requires additional security so other readers cannot decode the generated QR code, we could use asymmetric encryption (similar to JWT technology) to protect it.
+		</li>
+		<li>
+			We could explore other forms of payment such as Venmo (additional touchless experience) and split payment options for parties.
+		</li>
+		<li>
+			As part of the experience, the QR App can promote and help customers sign up for a loyalty program.
+		</li>
+		<li>
+			Same functionality could be implemented using Apple App Clips and Android Instant Apps as an additional option to our customers.The advantage of this solution is that we are platform/phone agnostic (Apple App Clips only work on iOS devices) and use open web technologies.
+		</li>
+	</ul>
+</div>
+
+</body>
