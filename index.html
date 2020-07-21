@@ -42,7 +42,7 @@
 	<h3>Considerations</h3>
 	<ul>
 		<li>
-			QR codes can encrypt up to 4300 alphanumeric characters. If needed, we could generate multiple QR codes (Our QR format would include a pagination indicator so the POS is aware multiple codes need to be scanned).
+			QR codes can encode up to 4300 alphanumeric characters. If needed, we could generate multiple QR codes (Our QR format would include a pagination indicator so the POS is aware multiple codes need to be scanned).
 		</li>
 		<li>
 			If the generated QR code requires additional security so other readers cannot decode the generated QR code, we could use asymmetric encryption (similar to JWT technology) to protect it.
@@ -51,7 +51,7 @@
 			We could explore other forms of payment such as Venmo (additional touchless experience) and split payment options for parties.
 		</li>
 		<li>
-			As part of the experience, the QR App can promote and help customers sign up for a loyalty program.
+			As part of the experience, the QR App can promote and help customers to sign up for a loyalty program.
 		</li>
 		<li>
 			Same functionality could be implemented using  <a href="https://developer.apple.com/app-clips/">Apple App Clips</a> and Google <a href="https://developer.android.com/topic/google-play-instant">Play Instant Apps</a> as an additional option to our customers. The advantage of this solution is that we are platform/phone agnostic (Apple App Clips only work on iOS devices) and use open web technologies. And the advantage of NCR vs Apple and Google is that we can leverage the presence of POS in the stores.
